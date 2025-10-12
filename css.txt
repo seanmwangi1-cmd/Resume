@@ -1,0 +1,192 @@
+/* Base Styles and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Use a standard, clean font like Arial or Helvetica for a professional look */
+    font-family: 'Arial', sans-serif; 
+}
+
+body {
+    background-color: #f4f4f4; /* Light gray background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
+.resume-container {
+    display: flex;
+    width: 850px; 
+    /* The screenshot shows a very clean boundary, so we'll use a subtle shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+    overflow: hidden; 
+}
+
+/* ----------------------------------- */
+/* LEFT SIDEBAR STYLES (Color Palette 1: Dark Gray) */
+/* ----------------------------------- */
+.sidebar {
+    width: 35%; 
+    background-color: #333333; /* Dark gray, close to black */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Profile Photo - SHAPE */
+.profile-photo-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the photo circular */
+    margin: 0 auto 30px; 
+    border: 5px solid white; /* White border as seen in the image */
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Sidebar Section Headers */
+.sidebar h2 {
+    font-size: 1.3em;
+    margin: 20px 0 10px;
+    padding-bottom: 5px;
+    /* Removing the separator line to match the clean look of the screenshot */
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0.2); */ 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar i {
+    margin-right: 5px;
+    color: white; /* Ensures icons are visible against the dark background */
+}
+
+/* About Me section */
+.about-me p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-align: left;
+    color: #cccccc; /* Lighter text for readability on dark background */
+}
+
+/* Contact Info */
+.contact-info p {
+    font-size: 0.9em;
+    margin: 8px 0;
+    text-align: left;
+}
+
+/* Skills List */
+.skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.skills li {
+    font-size: 0.95em;
+    margin-bottom: 5px;
+    padding: 5px 0;
+}
+
+/* ----------------------------------- */
+/* RIGHT MAIN CONTENT STYLES (Color Palette 2: White & Black) */
+/* ----------------------------------- */
+.main-content {
+    width: 65%;
+    padding: 40px 30px;
+}
+
+/* Header */
+header h1 {
+    font-size: 2.8em; /* Slightly larger for emphasis */
+    margin-bottom: 5px;
+    color: #111111; /* Very dark text */
+}
+
+header h2 {
+    font-size: 1.5em;
+    color: #444444; /* Dark gray for sub-heading */
+    font-weight: normal;
+    margin-bottom: 40px;
+    border-bottom: none; /* Removing the line to match the screenshot */
+    padding-bottom: 5px;
+}
+
+/* Section Headers */
+.main-content h2 {
+    font-size: 1.6em;
+    color: #111111; /* Dark text */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon for Education/Projects */
+.main-content h2 i {
+    font-size: 1.4em;
+    margin-right: 10px;
+    color: #111111; /* Black icon color */
+}
+
+/* Timeline/List Items - SHAPE */
+.timeline-item {
+    position: relative;
+    padding-left: 25px; 
+    margin-bottom: 15px;
+}
+
+/* Vertical Line - SHAPE */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 8px; 
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #888888; /* Gray line color */
+}
+
+/* Dot/Circle - SHAPE */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 4px; 
+    top: 6px; /* Adjusted position to center the dot */
+    width: 10px;
+    height: 10px;
+    background-color: #333333; /* Dark dot color */
+    border-radius: 50%;
+    z-index: 1; 
+}
+
+.timeline-text {
+    font-size: 1em;
+    color: #444444;
+    line-height: 1.4;
+}
+
+/* Styling for Project Links */
+.projects a {
+    color: #0000FF; /* Blue link color for contrast, as is standard */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projects a:hover {
+    text-decoration: underline;
+}
+
+/* Adjusting the last item's line */
+/* Stops the line right after the last dot */
+.timeline-item:last-of-type::before {
+    bottom: calc(100% - 11px); 
+}
